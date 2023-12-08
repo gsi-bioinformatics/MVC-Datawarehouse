@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog Entries</title>
+    <!-- Optional: Link to CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Catalog Entries</h1>
+    <div>
+        <!-- Check if there are entries to display -->
+        {% if entries %}
+            <ul>
+                <!-- Loop through each entry and display its details -->
+                {% for entry in entries %}
+                    <li>
+                        <h2>{{ entry.title }}</h2> <!-- Assuming 'title' is a field in your CatalogEntry -->
+                        <p>{{ entry.description }}</p> <!-- Assuming 'description' is another field -->
+                        <!-- Add more fields as necessary -->
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No entries found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
