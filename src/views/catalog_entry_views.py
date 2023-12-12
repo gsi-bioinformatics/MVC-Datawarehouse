@@ -1,6 +1,6 @@
 from flask import render_template
-from src.models.catalog_entry import CatalogEntry
+from src.models.healthcare_service import HealthcareService
 
-def catalog_list():
-    entries = CatalogEntry.get_all()
-    return render_template('catalog_list.html', entries=entries)
+# def catalog_list():
+#     entries = HealthcareService.get_all()
+#     return render_template('service_list.html', entries=entries)

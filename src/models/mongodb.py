@@ -14,5 +14,5 @@ def get_db():
 
     client = MongoClient(uri,server_api=ServerApi('1'))
     db = client['BDO']
-    catalog_collection = db["CatalogEntry"]
+    healthcare_service_collection = db["HealthcareService"]
     return db

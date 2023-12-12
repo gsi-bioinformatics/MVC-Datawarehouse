@@ -1,1 +1,1 @@
-from .catalog_entry import CatalogEntry
+from .healthcare_service import HealthcareService
